@@ -2,4 +2,66 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    background: #ccc;
+}
+
+.frame {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: #888;
+    /* overflow: hidden; */
+    margin: 0 auto;
+
+    top: 100px;
+}
+
+.face {
+    position: absolute;
+    width: 330px;
+    height: 300px;
+    background-color: #123456;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 5px solid #000;
+    border-radius: 140px;
+
+    z-index: 2;
+}
+
+.ear-left {
+    position: absolute;
+    top: 14px;
+    left: 91px;
+    background-color: red;
+    width: 112px;
+    height: 150px;
+
+    border: 5px solid black;
+    border-radius: 30% 70% 43% 57% / 55% 100% 0% 45%;
+
+    transform: rotate(-15deg);
+
+    z-index: 1;
+}
+
+.ear-right {
+    position: absolute;
+    top: 14px;
+    right: 91px;
+    background-color: red;
+    width: 112px;
+    height: 150px;
+
+    border: 5px solid black;
+    border-radius: 70% 30% 43% 57% / 100% 55% 45% 0%;
+    /* border-radius: 70% 30% 0% 100% / 100% 55% 45% 0%; */
+
+    transform: rotate(15deg);
+
+    z-index: 1;
 }
