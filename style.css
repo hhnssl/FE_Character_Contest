@@ -1,144 +1,175 @@
-body {
+body,
+div {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
 
-    background: #ccc;
+body {
+    background-image: url(./beach.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .frame {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
     width: 500px;
     height: 500px;
-    position: relative;
-    background-color: #888;
-    /* overflow: hidden; */
-    margin: 0 auto;
-
-    top: 100px;
 }
-
-.ear-left {
-    position: absolute;
-    top: 14px;
-    left: 91px;
-    background-color: red;
-    width: 112px;
-    height: 150px;
-
-    border: 5px solid black;
-    border-radius: 30% 70% 43% 57% / 55% 100% 0% 45%;
-
-    transform: rotate(-15deg);
-
-    z-index: 1;
-}
-
-.ear-right {
-    position: absolute;
-    top: 14px;
-    right: 91px;
-    background-color: red;
-    width: 112px;
-    height: 150px;
-
-    border: 5px solid black;
-    border-radius: 70% 30% 43% 57% / 100% 55% 45% 0%;
-    /* border-radius: 70% 30% 0% 100% / 100% 55% 45% 0%; */
-
-    transform: rotate(15deg);
-
-    z-index: 1;
-}
-
 .face {
-    position: absolute;
-    width: 316px;
-    height: 300px;
-    background-color: #123456;
-    margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    border: 5px solid #000;
-    border-radius: 140px;
-
-    z-index: 2;
+    margin: 250px auto;
+    width: 448px;
+    height: 448px;
+    background-color: #ffb22a;
+    border-radius: 51% 49% 46% 54% / 53% 49% 51% 47%;
+    box-shadow: 10px 10px 10px grey;
 }
 
-.eyes-left {
+.sunglass .left,
+.sunglass .right {
     position: absolute;
-    width: 70px;
-    height: 70px;
-    background-color: #fff;
-    /* z-index: 3; */
-    top: 89px;
-    left: 58px;
-
-    border-radius: 50%;
-}
-
-.eyes-right {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background-color: #fff;
-    /* z-index: 3; */
-    top: 89px;
-    right: 58px;
-
-    border-radius: 50%;
-}
-
-.left {
-    position: absolute;
-
-    top: 85px;
-    left: 35px;
-
-    width: 100px;
-    height: 80px;
-
+    top: 48px;
+    width: 220px;
+    height: 150px;
     background-color: #000;
-
-    border: 5px solid grey;
-    border-radius: 10px 10px 50px 50px;
+    border: 10px solid #4a55cb;
+    z-index: 1;
 }
 
-.right {
-    position: absolute;
+.sunglass .left {
+    left: 0;
 
-    top: 85px;
-    right: 35px;
-
-    width: 100px;
-    height: 80px;
-
-    background-color: #000;
-
-    border: 5px solid grey;
-    border-radius: 10px 10px 50px 50px;
+    border-radius: 50% 50% 37% 63% / 0% 42% 58% 100%;
 }
 
-.bar {
-    position: absolute;
-    width: 100%;
-    height: 20px;
+.sunglass .right {
+    right: 0;
 
-    top: 97px;
-
-    background-color: #000;
+    border-radius: 50% 50% 63% 37% / 42% 0% 100% 58%;
 }
 
-.nose {
+.shine {
     position: absolute;
+    top: 12px;
+    right: 25px;
+    width: 54px;
+    height: 64px;
     background-color: #fff;
-    width: 50px;
-    height: 50px;
+    border-radius: 6px 85px 20px 96px;
+    box-shadow: 2px 5px 16px 0px #eee;
+    box-sizing: border-box;
+}
 
-    top: 142px;
+.mut,
+.je {
+    position: absolute;
+    top: 46px;
+    left: 46px;
+    color: rgb(255, 255, 255, 0.2);
+    font-size: 40px;
+    font-weight: 900;
+
+    animation: blink 3s infinite alternate;
+}
+
+.sunglass .bar {
+    position: absolute;
+    width: 40px;
+    top: 99px;
     left: 50%;
     transform: translateX(-50%);
+    border: 10px solid #4a55cb;
+    z-index: 0;
+}
 
-    border-radius: 20px 20px 40px 40px;
+/**/
+.mouth {
+    position: absolute;
+    width: 280px;
+    height: 100px;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.beard-left,
+.beard-right {
+    width: 140px;
+    height: 80px;
+    background-color: #000;
+}
+
+.beard-left {
+    float: left;
+    transform: rotate(-10deg);
+    border-radius: 81px 16px 66px 0;
+}
+
+.beard-right {
+    float: right;
+    transform: rotate(10deg);
+    border-radius: 16px 81px 0 66px;
+}
+
+/**/
+.face-shine-bottom {
+    position: absolute;
+    top: 230px;
+    left: 76px;
+    width: 38px;
+    height: 162px;
+
+    background-color: transparent;
+    box-shadow: 20px 20px 0 0 #ffc259;
+    border-radius: 50%;
+    transform: rotate(160deg);
+
+    animation: shine 2s infinite alternate;
+}
+
+.face-shine-top {
+    position: absolute;
+    top: 2px;
+    right: 126px;
+    width: 38px;
+    height: 162px;
+
+    background-color: transparent;
+    box-shadow: 20px 20px 0 0 #ffc259;
+    border-radius: 50%;
+    transform: rotate(321deg);
+
+    animation: shine 2s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1.1);
+        color: rgb(255, 255, 255, 0.3);
+    }
+
+    50% {
+        transform: scale(0.8);
+        color: rgb(255, 255, 255, 0.1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        color: rgb(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 20px 20px 0 0 #ffca6d;
+    }
+
+    50% {
+        box-shadow: 20px 20px 0 0 #fbb844;
+    }
+
+    100% {
+        box-shadow: 20px 20px 0 0 #ffca6d;
+    }
 }
